@@ -36,6 +36,7 @@ module "sns_lambda" {
   environment_variables = var.lambda_environment_variables
 
   lambda_role = aws_iam_role.sns_lambda.arn
+  layers      = var.lambda_layers
 
   cloudwatch_logs_retention_in_days = var.lambda_cloudwatch_logs_retention_in_days
   cloudwatch_logs_tags              = var.tags

@@ -40,6 +40,12 @@ variable "lambda_timeout" {
   default     = 300
 }
 
+variable "lambda_layers" {
+  description = "List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function."
+  type        = list(string)
+  default     = null
+}
+
 variable "lambda_environment_variables" {
   description = "A map that defines environment variables for the Lambda Function."
   type        = map(string)
